@@ -18,3 +18,7 @@ class CalculatorTest(unittest.TestCase):
 
     def test_potencia(self):
         assert potencia_num(5, 6) == 15625
+
+    def test_division_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            division(6, 0)
